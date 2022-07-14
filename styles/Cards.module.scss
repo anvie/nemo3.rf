@@ -1,0 +1,20 @@
+
+
+.cardImage {
+  .claimBtn {
+    opacity: 0;
+  }
+  &:hover {
+    .claimBtn {
+      opacity: 1;
+    }
+  }
+}
+
+.cardTitle {
+  margin: 0;
+  font-size: 1.1em;
+  text-align: center;
+  font-family: 'Sofia', Georgia, sans-serif;
+  color: #FFF;
+}

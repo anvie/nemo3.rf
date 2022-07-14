@@ -1,0 +1,44 @@
+[reframe]
+name = "Nemo3"
+author = "r@ansvia.com"
+min_version = "0.1.8"
+
+[project]
+name = "MyWebApp"
+version = "0.1.0"
+ignore_dirs = [
+  "target",
+  "build",
+  ".next",
+  "node_modules"
+]
+ignore_files = [
+  ".flutter-plugins",
+  ".packages",
+  "*.iml"
+]
+finish_text = """Usage:
+    $ cd $name_kebab_case$
+
+Setup:
+    $ yarn
+
+To run (development):
+    $ yarn dev
+"""
+
+[[param]]
+description = { ask = "Description ?", default="My cool web app" }
+
+[[param]]
+author_name = { ask = "Author name?", default="Robin" }
+
+[[param]]
+author_email = { ask = "Author email?", default="robin@mail.com" }
+
+[[param]]
+web_url = { ask = "Web URL", default = "https://example.com" }
+
+[[param]]
+powered_by = { ask = "Powered by", default = "Your Company, Inc." }
+
