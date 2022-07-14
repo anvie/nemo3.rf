@@ -41,9 +41,6 @@ export default async function handler(
     const message = messageFormat + "\n\n" + address;
     const rcvAddr = await web3.eth.accounts.recover(message, signature);
 
-    console.log("🚀 ~ file: authAuthenticateUser.ts ~ line 36 ~ address", address)
-    console.log("🚀 ~ file: authAuthenticateUser.ts ~ line 44 ~ rcvAddr", rcvAddr)
-
     if (rcvAddr.toLowerCase() !== address.toLowerCase()) {
       res.json({ error: "Invalid signature" });
       return;
