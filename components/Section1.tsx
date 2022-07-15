@@ -7,24 +7,7 @@ const Section1 = () => {
     <div id="home" className="w-full">
       <div className="pb-10 w-full flex flex-col justify-center items-center">
         <div className="flex justify-center items-center">
-          <div className="pl-10 bounce-1">
-            <Image
-              src="hero-char1c.svg"
-              alt="$name$ character 1"
-              width="300"
-              height="444"
-              loader={imageLoader}
-            />
-          </div>
-          <div className="pl-10 bounce-1">
-            <Image
-              src="hero-char2b.svg"
-              alt="$name$ character 2"
-              width="300"
-              height="444"
-              loader={imageLoader}
-            />
-          </div>
+          <h1>$name$</h1>
         </div>
 
       </div>

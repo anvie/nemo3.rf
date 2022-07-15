@@ -18,10 +18,10 @@ const Section1 = () => {
         </p>
       </div>
 
-      <div className="concert-art">
+      <div className="image-art">
         <Image
-          src="concert-art.svg"
-          alt="$name$ concert art"
+          src="image-art.svg"
+          alt="$name$ art"
           height="300"
           width="300"
           loader={imageLoader}
