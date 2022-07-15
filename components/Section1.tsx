@@ -21,7 +21,7 @@ const Section1 = () => {
           Join our community to get the latest updates
         </div>
         <div
-          onClick={() => window.open("https://t.me/$name_camel_case$")}
+          onClick={() => window.open("https://t.me/$name_pascal_case$")}
           className={`${styles.joinCommunityButton} flex pt-2 pb-2 pr-6 pl-5 rounded-full items-center`}
         >
           <Image
