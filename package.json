@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "compile-deps": "cd listener && yarn compile-deps",
-    "sync-abi": "cp ../$name_pascal_case$-contract/build/contracts/$name_pascal_case$.json ./lib/$name_pascal_case$.json"
+    "sync-abi": "cp ../$name_kebab_case$-contract/build/contracts/$name_pascal_case$.json ./lib/$name_pascal_case$.json"
   },
   "dependencies": {
     "@metamask/detect-provider": "^1.2.0",

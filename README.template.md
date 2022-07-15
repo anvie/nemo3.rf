@@ -32,26 +32,3 @@ To learn more about Next.js, take a look at the following resources:
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-
-## Telegram Bot
-
-Is bot to handle user requests from Telegram, this bot provides function to 
-register/unregister account (bind) eth address to an account.
-
-To run telegram bot:
-
-```
-yarn start:telegram-bot
-```
-
-## Contract Event Listener
-
-Is a nodejs server to listen to contract events and save/update data to database, and keep track of the token ownership.
-
-To start contract event listener:
-
-```
-yarn start:listener
-```
-
