@@ -139,7 +139,7 @@ const Home: NextPage = () => {
         <title>$name$</title>
         <meta
           name="description"
-          content="$name$ is a collection of 1000 digital collectible items with exclusive benefits"
+          content="$param.description$"
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -198,13 +198,7 @@ function watchTransaction(web3: Web3, txHash: any): Promise<any> {
     web3.eth
       .getTransactionReceipt(txHash)
       .then((receipt: any) => {
-        console.log(
-          "🚀 ~ file: MintDialog.tsx ~ line 165 ~ web3.eth.getTransactionReceipt ~ receipt",
-          receipt
-        );
-
         if (!receipt || !receipt.status) {
-          console.log("no receipt");
           resolve(null);
           return;
         }
