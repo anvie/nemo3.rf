@@ -29,8 +29,9 @@ const Home: NextPage = () => {
         <Section2 />
       </main>
 
-      <div id="timeline"
-        className={`${styles.gradientBar} ${styles.timeline} w-full h-auto flex flex-row space-y-5 md:space-y-0 items-center justify-center p-5`}
+      {{#if with_telegram}}
+      <div
+        className={`${styles.gradientBar} w-full h-auto flex flex-row space-y-5 md:space-y-0 items-center justify-center p-5`}
       >
         <div className={`${styles2.joinCommunityText} md:pr-5 md:text-sm text-center`}>
           For more information and detail please join Telegram group 👉
@@ -48,8 +49,11 @@ const Home: NextPage = () => {
           <div>Telegram</div>
         </div>
       </div>
+      {{/if}}
 
+      {{#if with_faq}}
       <FAQ />
+      {{/if}}
 
       <footer className={styles.footer}>
         <div className="flex flex-col place-items-center items-center justify-center pt-10">

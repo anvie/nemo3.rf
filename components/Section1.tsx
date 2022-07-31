@@ -12,6 +12,7 @@ const Section1 = () => {
 
       </div>
 
+      {{#if with_telegram}}
       <div
         className={`${styles.gradientBar} w-full h-auto flex flex-col md:flex-row space-y-5 md:space-y-0 items-center justify-center p-5`}
       >
@@ -34,6 +35,7 @@ const Section1 = () => {
           <div>Telegram</div>
         </div>
       </div>
+      {{/if}}
     </div>
   );
 };

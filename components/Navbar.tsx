@@ -7,7 +7,9 @@ type LinksType = Array<{ href: string; label: string; onClick?: () => void }>;
 
 const DEFAULT_LINKS: LinksType = [
   { href: "/#about", label: "About" },
+  {{#if with_faq}}
   { href: "/#faq", label: "FAQ" },
+  {{/if}}
 ];
 
 interface Props {

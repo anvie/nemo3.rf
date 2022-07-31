@@ -42,3 +42,17 @@ web_url = { ask = "Web URL", default = "https://example.com" }
 [[param]]
 powered_by = { ask = "Powered by", default = "Your Company, Inc." }
 
+[[param]]
+with_telegram = { ask = "With Telegram", default = "true" }
+
+[[param]]
+with_faq = { ask = "With FAQ", default = "true" }
+
+[[present]]
+path = "components/FAQ.tsx"
+if = "with_faq"
+
+[[present]]
+path = "components/FaqSection.tsx"
+if = "with_faq"
+

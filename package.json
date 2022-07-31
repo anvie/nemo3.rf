@@ -7,7 +7,6 @@
     "generate": "next build && next export",
     "start": "next start",
     "lint": "next lint",
-    "compile-deps": "cd listener && yarn compile-deps",
     "sync-abi": "cp ../$name_kebab_case$-contract/build/contracts/$name_pascal_case$.json ./lib/$name_pascal_case$.json"
   },
   "dependencies": {
