@@ -1,8 +1,7 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from "next";
-const db = require("../../lib/db");
-
 {{#if with_mongodb}}
+const db = require("../../lib/db");
 import { Eligible } from "../../models/Eligible";
 import { EligibleAddress } from "../../models/EligibleAddress";
 import { getAccountEligibilty } from "../../lib/AccountUtils";
@@ -34,11 +33,8 @@ export default function handler(
   }
 
   const addressLower = (address as string).toLowerCase();
-  console.log(
-    "🚀 ~ file: isEligible.ts ~ line 31 ~ addressLower",
-    addressLower
-  );
 
+  {{#if with_mongodb}}
   getAccountEligibilty(addressLower, false).then(({eligible, claimed, discount}) => {
     res.json({ eligible, claimed, discount, error: null });
   }).catch((err: any) => {
@@ -47,6 +43,7 @@ export default function handler(
       .status(200)
       .json({ eligible: false, error: "Cannot get eligibility from db" });
   });
+  {{/if}}
 
   // Eligible.findOne({ address: addressLower })
   //   .then((doc: any) => {

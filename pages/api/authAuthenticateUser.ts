@@ -3,7 +3,9 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import jwt from "jsonwebtoken";
 import getConfig from "next/config";
 
+{{#if with_mongodb}}
 const db = require("../../lib/db");
+{{/if}}
 
 const { serverRuntimeConfig } = getConfig();
 
