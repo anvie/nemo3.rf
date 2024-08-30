@@ -1,22 +1,13 @@
 [reframe]
 name = "Nemo3"
-author = "r@ansvia.com"
+author = "robin@mail.nu.id"
 min_version = "0.1.8"
 
 [project]
 name = "MyWebApp"
 version = "0.1.0"
-ignore_dirs = [
-  "target",
-  "build",
-  ".next",
-  "node_modules"
-]
-ignore_files = [
-  ".flutter-plugins",
-  ".packages",
-  "*.iml"
-]
+ignore_dirs = ["target", "build", ".next", "node_modules"]
+ignore_files = [".flutter-plugins", ".packages", "*.iml"]
 finish_text = """Usage:
     $ cd $name_kebab_case$
 
@@ -28,13 +19,13 @@ To run (development):
 """
 
 [[param]]
-description = { ask = "Description ?", default="My cool web app" }
+description = { ask = "Description ?", default = "My cool web app" }
 
 [[param]]
-author_name = { ask = "Author name?", default="Robin" }
+author_name = { ask = "Author name?", default = "Bob" }
 
 [[param]]
-author_email = { ask = "Author email?", default="robin@mail.com" }
+author_email = { ask = "Author email?", default = "robin@mail.com" }
 
 [[param]]
 web_url = { ask = "Web URL", default = "https://example.com" }
@@ -48,6 +39,9 @@ with_telegram = { ask = "With Telegram", default = "true" }
 [[param]]
 with_faq = { ask = "With FAQ", default = "true" }
 
+[[param]]
+with_mongodb = { ask = "With MongoDB", default = "true" }
+
 [[present]]
 path = "components/FAQ.tsx"
 if = "with_faq"
@@ -56,3 +50,10 @@ if = "with_faq"
 path = "components/FaqSection.tsx"
 if = "with_faq"
 
+[[present]]
+path = "lib/db.ts"
+if = "with_mongodb"
+
+[[present]]
+path = "models"
+if = "with_mongodb"

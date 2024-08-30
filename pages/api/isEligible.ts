@@ -2,9 +2,11 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 const db = require("../../lib/db");
 
+{{#if with_mongodb}}
 import { Eligible } from "../../models/Eligible";
 import { EligibleAddress } from "../../models/EligibleAddress";
 import { getAccountEligibilty } from "../../lib/AccountUtils";
+{{/if}}
 
 type Data = {
   error?: string | null;

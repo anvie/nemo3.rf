@@ -8,7 +8,10 @@ import Section1 from "../components/Section1";
 import Section2 from "../components/Section2";
 import { FC } from "react";
 import imageLoader from "../imageLoader";
+
+{{#if with_faq}}
 import FAQ from "../components/FAQ";
+{{/if}}
 
 const Home: NextPage = () => {
   return (
@@ -70,30 +73,6 @@ const Home: NextPage = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
-};
-
-interface TimelineBoxProps {
-  title: string;
-  time: string;
-}
-
-const TimelineBox: FC<TimelineBoxProps> = ({ title, time, children }) => {
-  return (
-    <div className="flex flex-wrap w-auto md:w-1/2 p-5">
-      <div className="bg-orange-100 p-5 rounded-xl">
-        <div className="flex">
-          <div className={styles.title}>{title}</div>
-          <div
-            className={`${styles.time} ml-5 bg-orange-400 h-6 pl-2 pr-2 rounded-xl`}
-          >
-            {time}
-          </div>
-        </div>
-
-        {children}
-      </div>
     </div>
   );
 };

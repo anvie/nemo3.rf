@@ -1,7 +1,9 @@
+{{#if with_mongodb}}
 import { Eligible } from "../models/Eligible";
 import { EligibleAddress } from "../models/EligibleAddress";
 
 const db = require("../lib/db");
+{{/if}}
 
 const Web3 = require("web3");
 
